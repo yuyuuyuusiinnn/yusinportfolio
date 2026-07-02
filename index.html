@@ -2,31 +2,147 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>農業と情報 ポートフォリオ</title>
+    <title>農業と情報 ポートフォリオ | 汁なしラーメン研究</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #222;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 40px 20px;
+            background-color: #fcf8f2; /* ラーメンの器をイメージした温かみのある白 */
+        }
+        
+        /* ヘッダー：ラーメン屋の看板風 */
+        header {
+            background-color: #111; /* 漆黒 */
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid #d32f2f; /* ラーメンどんぶりの赤 */
+            margin-bottom: 30px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: #ffb300; /* 美味しそうな黄金イエロー */
+        }
+        
+        h2 {
+            color: #d32f2f; /* 旨辛赤 */
+            font-size: 1.4rem;
+            margin-top: 40px;
+            border-bottom: 2px solid #d32f2f;
+            padding-bottom: 5px;
+        }
+
+        /* プロフィール枠 */
+        .intro-box {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 6px solid #ffb300;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .intro-box p {
+            margin: 8px 0;
+        }
+        .theme-title {
+            font-size: 1.2rem;
+            color: #d32f2f;
+        }
+
+        /* 写真を並べるコンテナ */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        /* 写真1枚ずつのカード風デザイン */
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+            border: 1px solid #e0e0e0;
+        }
+        .card:hover {
+            transform: translateY(-5px); /* マウスを乗せると少し浮き上がる演出 */
+        }
+        
+        /* 画像のトリミングとサイズ固定 */
+        .image-wrapper {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 画像の比率を保ったまま枠に収める */
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+        .card-text {
+            font-size: 0.95rem;
+            color: #444;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>私の農業実習・課題研究ポートフォリオ</h1>
+    <header>
+        <h1>🍜 農業実習・課題研究ポートフォリオ</h1>
+    </header>
     
-    <h2>1. 自己紹介・研究テーマ</h2>
-    <p>大西優心、河野裕真　　
-    　　汁なしラーメン</p>
-
-    <h2>2. 実習の様子</h2>
-    
-    <div>
-        <img src="photo1.jpg.jpg" alt="小麦が植わっている畑" width="300">
-        <p>僕たちがラーメンで使う小麦が植わっている畑です。</p>
+    <h2>📊 1. 研究テーマ・メンバー</h2>
+    <div class="intro-box">
+        <p><strong>【研究テーマ】</strong> <span class="theme-title"><strong>究極の汁なしラーメン作り</strong></span></p>
+        <p><strong>【開発メンバー】</strong> 大西優心、河野裕真</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+        <p>僕たちは課題研究として「汁なしラーメン」の制作に取り組んでいます！自分たちで育てたこだわりの小麦を使い、最高の一杯を作るための実習データをここに記録します。</p>
     </div>
 
-    <div>
-        <img src="photo2.jpg.jpg" alt="収穫した小麦を乾燥させた後の水分量を図っている様子" width="300">
-        <p>収穫した小麦を乾燥させた後の水分量を図っている様子</p>
-    </div>
+    <h2>📸 2. 実習・栽培の記録</h2>
+    
+    <div class="grid-container">
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="photo1.jpg.jpg" alt="小麦が植わっている広い畑の様子">
+            </div>
+            <div class="card-content">
+                <p class="card-text">僕たちがラーメンの麺（めん）の材料として使う、小麦が元気に育っている畑です！</p>
+            </div>
+        </div>
 
-    <div>
-        <img src="photo3.jpg.jpg" alt="相棒の河野裕真です" width="300">
-        <p>相棒の河野裕真です</p>
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="photo2.jpg.jpg" alt="収穫した小麦の水分量を計測器で図っている様子">
+            </div>
+            <div class="card-content">
+                <p class="card-text">収穫した小麦の品質をチェックするため、乾燥させた後の水分量を正確に計測している実習風景です。</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="photo3.jpg.jpg" alt="一緒に研究を頑張る相棒の河野裕真の笑顔のバストアップ写真">
+            </div>
+            <div class="card-content">
+                <p class="card-text">共に試行錯誤しながら、美味しい汁なしラーメンの開発に全力を尽くす相棒の河野裕真です！</p>
+            </div>
+        </div>
     </div>
 
 </body>
